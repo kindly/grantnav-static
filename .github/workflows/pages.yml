@@ -18,6 +18,7 @@ concurrency:
 
 env:
   VITE_DATA_URL: https://flatterer-test.s3.eu-west-2.amazonaws.com/grantnav/data/grantnav.facetful
+  BASE_PATH: /grantnav-static
 
 jobs:
   build:

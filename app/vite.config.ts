@@ -53,7 +53,11 @@ export default defineConfig({
 			},
 			// Pure static hosting (S3). One route; a grant opens as ?grant=<id>, so
 			// no path ever needs a server-side fallback.
-			adapter: adapter({ fallback: 'index.html' })
+			adapter: adapter({ fallback: 'index.html' }),
+			// GitHub Pages serves the app under /<repo>/. The fallback index.html
+			// uses absolute asset paths whatever paths.relative says, so the base
+			// has to be set (the workflow passes BASE_PATH); empty everywhere else.
+			paths: { base: (process.env.BASE_PATH ?? '') as '' | `/${string}` }
 		})
 	]
 });

@@ -1,0 +1,24 @@
+# data images and source CSVs: hundreds of MB, published to S3 (scripts/deploy_s3.sh)
+/data/
+*.facetful
+*.facetful.gz
+*.facetful.br
+*.csv
+
+# experiment scratch (images, browser profiles, screenshots)
+/build/
+
+# the previous hand-rolled page and its scripts, kept locally only
+/web/
+
+# app build output and dependencies
+node_modules/
+/app/build/
+/app/.svelte-kit/
+vite.config.ts.timestamp-*
+__pycache__/
+
+# local tool state
+.claude/
+.env
+.envrc

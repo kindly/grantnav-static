@@ -1,0 +1,31 @@
+{
+	"name": "grantnav-static",
+	"private": true,
+	"version": "0.1.0",
+	"type": "module",
+	"description": "Every 360Giving grant, faceted and searched in the browser over one static facetful image.",
+	"scripts": {
+		"dev": "vite dev",
+		"build": "vite build",
+		"preview": "vite preview",
+		"prepare": "svelte-kit sync || echo ''",
+		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
+		"test": "node --test tests/"
+	},
+	"devDependencies": {
+		"@sveltejs/adapter-static": "^3.0.10",
+		"@sveltejs/kit": "^2.70.3",
+		"@sveltejs/vite-plugin-svelte": "^7.3.1",
+		"@types/node": "^24.13.6",
+		"svelte": "^5.57.1",
+		"svelte-check": "^4.7.6",
+		"typescript": "^6.0.3",
+		"vite": "^8.3.0"
+	},
+	"dependencies": {
+		"facetful": "file:prerelease/facetful-77b43b5.tgz"
+	},
+	"engines": {
+		"node": ">=22"
+	}
+}
